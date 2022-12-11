@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.936a3165.css",
+    "main.js": "/static/js/main.ffae3d4e.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/twitter-pexels.jpg": "/static/media/twitter-pexels.35a76477aa70a1ece186.jpg",
+    "static/media/burger-pexels.jpg": "/static/media/burger-pexels.91b5c13a6e6957cb1cfb.jpg",
+    "static/media/black jack-pexels.jpg": "/static/media/black jack-pexels.8ed923bd2dea51ef9230.jpg",
+    "static/media/quiz-pexels.jpg": "/static/media/quiz-pexels.e6048403968526b06898.jpg",
+    "static/media/duel-pexels.jpg": "/static/media/duel-pexels.0e0d7f8b09016517a948.jpg",
+    "static/media/IMG_019070.jpg": "/static/media/IMG_019070.11dba685f4535f80cb31.jpg",
+    "static/media/lemonade-pexels.jpg": "/static/media/lemonade-pexels.96203b183537ef6dbb75.jpg",
+    "static/media/2022-12-8 Resume Michael Cleveland.pdf": "/static/media/2022-12-8 Resume Michael Cleveland.e15ddac423d16916ecf3.pdf",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.936a3165.css.map": "/static/css/main.936a3165.css.map",
+    "main.ffae3d4e.js.map": "/static/js/main.ffae3d4e.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.936a3165.css",
+    "static/js/main.ffae3d4e.js"
+  ]
+}
