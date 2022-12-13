@@ -282,6 +282,10 @@ header.sticky ul li a
 .contactInfo p{
     color:#999;
 }
+/* I added this after removing the email form. */
+.contactInfo h3{
+    text-align: center;
+}
 .contactInfoBx{
     position:relative;
 }
