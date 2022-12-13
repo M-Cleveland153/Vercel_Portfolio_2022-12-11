@@ -4,6 +4,7 @@ import "./style.css";
 
 function App() {
   const [scrollState, setScrollState] = useState(false);
+  const [menuIsActive, setMenuIsActive] = useState(false);
 
   const changeValueScroll = () => {
     const scrollValue = document.documentElement.scrollTop;
@@ -14,30 +15,52 @@ function App() {
     }
   };
 
+  function toggleMenu() {
+    if (menuIsActive) {
+      setMenuIsActive(false);
+    } else {
+      setMenuIsActive(true);
+    }
+  }
+
   window.addEventListener("scroll", changeValueScroll);
 
   return (
     <>
-      <header className= {scrollState?"sticky":""}>
+      <header className={scrollState ? "sticky" : ""}>
         <a href="#" class="logo">
           Portfolio
         </a>
+        <div
+          className={menuIsActive ? "toggle active" : "toggle"}
+          onClick={toggleMenu}
+        ></div>
 
-        <ul class="menu">
+        <ul className={menuIsActive ? "menu active" : "menu"}>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={toggleMenu}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="#about">About</a>
+            <a href="#about" onClick={toggleMenu}>
+              About
+            </a>
           </li>
           <li>
-            <a href="#toolkit">Toolkit</a>
+            <a href="#toolkit" onClick={toggleMenu}>
+              Toolkit
+            </a>
           </li>
           <li>
-            <a href="#work">Work</a>
+            <a href="#work" onClick={toggleMenu}>
+              Work
+            </a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact" onClick={toggleMenu}>
+              Contact
+            </a>
           </li>
         </ul>
       </header>
@@ -202,12 +225,61 @@ function App() {
         <div class="content">
           <div class="workBx">
             <a
+              href="https://github.com/M-Cleveland153/Project_Management_App_Front_End_2022-12-10"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={require("./McInputFiles/TeamProject-Freepik - Front.jpg")}
+                alt=""
+              />
+              <p class="FreepikAttr">Image by katemangostar on Freepik</p>
+              <p>Full Stack Project Management App - Front End </p>
+              <p>(React)</p>
+            </a>
+          </div>
+          <div class="workBx">
+            <a
+              href="https://github.com/M-Cleveland153/Project_Management_App_Back_End_2022-12-10"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={require("./McInputFiles/TeamProject-Freepik - Back - InProgress.jpg")}
+                alt=""
+              />
+              <p class="FreepikAttr">Image by katemangostar on Freepik</p>
+              <p>Full Stack Project Management App - Back End</p>
+              <p>(Srping Boot)</p>
+            </a>
+          </div>
+          <div class="workBx">
+            <a
               href="https://github.com/M-Cleveland153/TwitterReplicaAPI_2022-11-15"
               target="_blank"
               rel="noreferrer"
             >
-              <img src={require("./McInputFiles/twitter-pexels.jpg")} alt="" />
-              <p>Twitter Replica RESTful API</p>
+              <img
+                src={require("./McInputFiles/twitter-pexels - resize.jpg")}
+                alt=""
+              />
+              <p>
+                Twitter Replica RESTful API <br />
+                (Spring Boot)
+              </p>
+            </a>
+          </div>
+          <div class="workBx">
+            <a
+              href="https://github.com/M-Cleveland153/Spotify_Game_App_2022-12-10"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={require("./McInputFiles/spotify-pexels.jpg")} alt="" />
+              <p>
+                Spotify Game Application <br />
+                (React)
+              </p>
             </a>
           </div>
           <div class="workBx">
@@ -217,9 +289,29 @@ function App() {
               rel="noreferrer"
             >
               <img src={require("./McInputFiles/lemonade-pexels.jpg")} alt="" />
-              <p>Lemonade Stand Command Line Interface</p>
+              <p>
+                Lemonade Stand Command Line Interface <br />
+                (Vorpal)
+              </p>
             </a>
           </div>
+          <div class="workBx">
+            <a
+              href="https://github.com/M-Cleveland153/QuizAPI_2022-11-15"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={require("./McInputFiles/quiz-pexels.jpg")} alt="" />
+              <p>
+                Quiz API <br />
+                (Spring Boot)
+              </p>
+            </a>
+          </div>
+          {/* <div class="heading">
+                <a href="https://github.com/M-Cleveland153?tab=repositories" 
+                target="_blank" class="btn" style="color:#fff">See All Projects</a>
+            </div>  */}
           <div class="workBx">
             <a
               href="https://github.com/M-Cleveland153/Sandwich_Order_App_2022-11-15"
@@ -227,7 +319,10 @@ function App() {
               rel="noreferrer"
             >
               <img src={require("./McInputFiles/burger-pexels.jpg")} alt="" />
-              <p>Sandwich Order Application (Java)</p>
+              <p>
+                Sandwich Order Application <br />
+                (Java)
+              </p>
             </a>
           </div>
           <div class="workBx">
@@ -240,33 +335,12 @@ function App() {
                 src={require("./McInputFiles/black jack-pexels.jpg")}
                 alt=""
               />
-              <p>Black Jack Game Application (Python)</p>
+              <p>
+                Black Jack Game Application <br />
+                (Python)
+              </p>
             </a>
           </div>
-          <div class="workBx">
-            <a
-              href="https://github.com/M-Cleveland153/QuizAPI_2022-11-15"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={require("./McInputFiles/quiz-pexels.jpg")} alt="" />
-              <p>Quiz API</p>
-            </a>
-          </div>
-          <div class="workBx">
-            <a
-              href="https://github.com/M-Cleveland153?tab=repositories"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <img src={require("./McInputFiles/duel-pexels.jpg")} alt="" />
-              <p>React Dev Duel Full Stack Application</p>
-            </a>
-          </div>
-          {/* <div class="heading">
-                <a href="https://github.com/M-Cleveland153?tab=repositories" 
-                target="_blank" class="btn" style="color:#fff">See All Projects</a>
-            </div>  */}
           <div class="heading">
             <a
               href="https://github.com/M-Cleveland153?tab=repositories"
@@ -305,21 +379,28 @@ function App() {
         </div>
         <div class="content">
           <div class="contactInfo">
-            <h3>Contact Information</h3>
+            {/* <h3>Contact Information</h3>
             <p>
               I am available for freelance work if the right project comes along
-            </p>
+            </p> */}
+            <h3>
+              I am available for freelance work if the right project comes along
+            </h3>
             <div class="contactInfoBx">
               <div class="box">
-                <div class="icon">
-                  <i class="fa-solid fa-location-dot"></i>
-                </div>
-                <div class="text">
-                  <h3>Residence</h3>
-                  <address>Memphis, TN </address>
+                <div className="mcRemovesEmailForm">
+                  {" "}
+                  {/* I created this div when I removed the email form */}
+                  <div class="icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div class="text">
+                    <h3>Residence</h3>
+                    <address>Memphis, TN </address>
+                  </div>
                 </div>
               </div>
-              <div class="box">
+              {/* <div class="box">
                 <div class="icon">
                   <i class="fa-solid fa-phone"></i>
                 </div>
@@ -327,60 +408,73 @@ function App() {
                   <h3>Phone no :</h3>
                   <p>901.491.7304</p>
                 </div>
-              </div>
+              </div> */}
               <div class="box">
-                <div class="icon">
-                  <i class="fa-solid fa-envelope"></i>
-                </div>
-                <div class="text">
-                  <h3>Email Address</h3>
-                  <p>m999cleveland@gmail.com</p>
+                <div className="mcRemovesEmailForm">
+                  {" "}
+                  {/* I created this div when I removed the email form */}
+                  <div class="icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="text">
+                    <h3>Email Address</h3>
+                    <p>m999cleveland@gmail.com</p>
+                  </div>
                 </div>
               </div>
               <br />
-              <h3>Let's Connect</h3>
-              <div class="boxSocial">
-                <div class="icon">
+              <div class="box">
+                <div className="mcRemovesEmailForm">
+                <h3 class="LetsConnect">Let's Connect</h3>
+                <div class="boxSocial">
+                 
+                    {/* <div class="icon">
                   <a
                     href="https://www.facebook.com/michael.cleveland.1840"
                     target="_blank"
                   >
                     <i class="fa-brands fa-square-facebook"></i>
                   </a>
-                </div>
-                <div class="icon">
-                  <a
-                    href="https://www.linkedin.com/in/michael-c-63985744/"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-linkedin"></i>
-                  </a>
-                </div>
-                <div class="icon">
-                  <a href="https://twitter.com/Michael63903865" target="_blank">
-                    <i class="fa-brands fa-square-twitter"></i>
-                  </a>
-                </div>
-                <div class="icon">
+                </div> */}
+                    <div class="icon">
+                      <a
+                        href="https://www.linkedin.com/in/michael-c-63985744/"
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-linkedin"></i>
+                      </a>
+                    </div>
+                    <div class="icon">
+                      <a
+                        href="https://twitter.com/Michael63903865"
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-square-twitter"></i>
+                      </a>
+                    </div>
+                    {/* <div class="icon">
                   <a
                     href="https://www.instagram.com/m999cleveland/"
                     target="_blank"
                   >
                     <i class="fa-brands fa-instagram"></i>
                   </a>
+                </div> */}
+                    <div class="icon">
+                      <a
+                        href="https://www.hackerrank.com/Lithofalco"
+                        target="_blank"
+                      >
+                        <i class="fa-brands fa-hackerrank"></i>
+                      </a>
+                    </div>
+                  
                 </div>
-                <div class="icon">
-                  <a
-                    href="https://www.hackerrank.com/Lithofalco"
-                    target="_blank"
-                  >
-                    <i class="fa-brands fa-hackerrank"></i>
-                  </a>
                 </div>
               </div>
             </div>
           </div>
-          <div class="formBx">
+          {/* <div class="formBx">
             <form>
               <h3>Message Me</h3>
               <input type="text" placeholder="Full Name" />
@@ -393,13 +487,13 @@ function App() {
               ></textarea>
               <input type="submit" value="Send Message" name="" />
             </form>
-          </div>
+          </div> */}
         </div>
       </section>
 
       {/* <!-- Creating Footer Layout in HTML--> */}
       <footer class="copyright">
-        <p>&copy; 2020, Michael's Portfolio, Allrights reserved</p>
+        <p>&copy; 2022, Please respect Michael's rights</p>
       </footer>
     </>
   );

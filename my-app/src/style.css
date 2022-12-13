@@ -32,10 +32,12 @@ section{
 }
 .banner h2 span{
     font-size: 1.2em;
+    font-weight: 300;
     color:#efefef;
 }
 .banner h3{
     color:#fff;
+    font-size: 1.5em;
     font-weight: 500;
 }
 .btn{
@@ -76,8 +78,11 @@ section{
     text-align:justify;
 }
 .proPic{
-    width:400px;
-    height:350px;
+    /* width:400px;
+    height:350px;*/
+
+    width: auto;
+    height: auto;
     border-top-left-radius: 30%;
     border-bottom-right-radius: 30%;
 }
@@ -216,6 +221,9 @@ header.sticky ul li a
     text-decoration:none;
     font-weight: 600;
 }
+.FreepikAttr{
+    font-size: small;
+}
 
 /* Designing Contact Layout in CSS */
 .contact{
@@ -267,6 +275,9 @@ header.sticky ul li a
 }
 .contactInfo{
     min-width: 40%;
+    
+    /* I added the following after I removed the email form */
+    margin: 0 auto;
 }
 .contactInfo p{
     color:#999;
@@ -279,6 +290,17 @@ header.sticky ul li a
     padding:20px 0;
     display:flex;
 }
+
+
+
+/* I added this when I removed the email form. I also created new divs where it is called. */
+.mcRemovesEmailForm{
+    margin:0 auto;
+    position:relative;
+}
+
+
+
 .contactInfoBx .box .icon{
     color: #fff;
     min-width:40px;
@@ -290,10 +312,14 @@ header.sticky ul li a
 }
 .contactInfoBx .box .text{
     color:#999;
-    margin-left: 20px;
+    /* margin-left: 20px; I removed this when I removed the email form*/ 
     font-size:16px;
     flex-direction:column;
     font-weight:300;
+
+    text-align: center; /*I added this when I removed the email form*/
+
+    
 }
 .contactInfoBx .box .text h3{
     color:#009e66;
@@ -305,12 +331,39 @@ header.sticky ul li a
     font-weight:300;
     color:#999;
 }
+
+.LetsConnect{
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
 .contactInfoBx .boxSocial{
     display:flex;
     flex-direction: row;
-    padding-left:60px;
+    /* padding-left:60px; I removed this when I removed the email form */
     letter-spacing:15px;
 }
+
+/* I added this when I removed the email form. I also created new divs where it is called. */
+.mcRemovesEmailFormSocial{
+    /* margin:0 auto; */
+    /* position:relative; */
+    /* padding:20px 0; */
+    /* display:flex; */
+/* 
+    display:flex;
+    flex-direction: row;
+    letter-spacing:15px; */
+
+    /* heading bottom */
+    /* display: flex; */
+    /* justify-content: space-between; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    
+}
+
 .contactInfoBx .boxSocial .fa-brands{
     font-size: 42px;
     color:#009e66;
@@ -324,3 +377,138 @@ footer.copyright{
     text-align: center;
     padding:10px;
 }
+
+/* Making Responsive Layout*/
+@media (max-width: 991px) {
+    header,
+    header.sticky {
+      padding: 20px 50px;
+      z-index: 2;
+    }
+    header .menu {
+      display: none;
+      z-index: 1;
+    }
+    header .menu {
+      position: fixed;
+      background: #fff;
+      display: block;
+      top: 75px;
+      left: -100%;
+      padding: 100px 50px;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+      border-top: 1px solid rgba(0, 0, 0, 0.2);
+      transition: 0.5s;
+    }
+    header .menu.active {
+      position: fixed;
+      background: #fff;
+      display: block;
+      top: 75px;
+      left: 0;
+      padding: 100px 50px;
+      width: 100%;
+      height: 100vh;
+      text-align: center;
+    }
+    header ul li a {
+      font-size: 20px;
+      color: #111;
+      font-weight: 400;
+      margin: 10px 0;
+    }
+    .toggle {
+      width: 40px;
+      height: 40px;
+      background-image: url(McInputFiles/menu-icon-19347.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      cursor: pointer;
+    }
+    .toggle.active {
+      width: 40px;
+      height: 40px;
+      background-image: url(McInputFiles/WhiteCloseX.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 30px;
+      cursor: pointer;
+    }
+    header.sticky .toggle {
+      filter: invert(1);
+    }
+    section {
+      padding: 100px 30px;
+    }
+    .banner {
+      padding: 150px 50px 100px;
+    }
+    .banner h2 {
+      font-size: 1.5em;
+    }
+    .banner h3 {
+      font-size: 1em;
+    }
+    .textBx {
+      position: relative;
+      top: 170px;
+    }
+    .btn {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 50px;
+    }
+    .content {
+      flex-direction: column;
+    }
+    .contentBx {
+      padding: 0;
+    }
+    .content .w50 img {
+      display: block;
+      margin: 0 auto 30px auto;
+    }
+    .heading h2 {
+      font-size: 24px;
+    }
+    .contentBx h3 {
+      font-size: 20px;
+    }
+    .contentBx h2 {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  
+    .contactInfo {
+      margin: 10px 0;
+    }
+
+    /* I add the following when I removed the email form */
+    .contactInfo h3{
+        font-size: 15px;
+        text-align: center;
+    }
+
+  }
+  @media (max-width: 768px) {
+    .heading.bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .heading.bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+    }
+  }
+  
