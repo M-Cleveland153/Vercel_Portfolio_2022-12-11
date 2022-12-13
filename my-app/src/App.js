@@ -99,26 +99,27 @@ function App() {
                 <p id="githubBio"></p> --> */}
             <h2 id="githubBio"></h2>
             <p>
-              As a member of the Cook Systems’ FastTrack Program I have created
+              As a member of the Cook Systems FastTrack Program I have created
               three different RESTful APIs with the Java Spring Boot framework
-              and tested them using Postman. At the time of writing, I have also
-              begun a project utilizing JavaScript and the REACT framework. For
-              larger projects I have collaborated remotely with other developers
-              via GitHub and a Slack channel. Prior to starting FastTrack, I
-              taught myself Python, Java and PostgreSQL, and last year I passed
-              the Tableau desktop certified associate exam. Of course this
-              website (composed of HTML, CSS, and JavaScript) is of my making as
-              well.{" "}
+              and tested them using Postman. I have also utilized React.js and
+              Node.js to create several front-end web-based applications, and I
+              have utilized Vorpal to create a couple of command line
+              interfaces. For larger projects I have collaborated remotely with
+              other developers via GitHub and Slack. Prior to starting
+              FastTrack, I learned Python, Java and PostgreSQL, and in
+              October of 2021, I passed the Tableau desktop certified associate
+              exam. Of course, this website (composed of HTML, CSS, and
+              React.js) is of my making as well.
             </p>
             <br />
             <p>
               In 2011, I graduated from the University of Tennessee with a
-              Bachelor of Science degree in mechanical engineering summa cum
-              laude as a member of the engineering honor society Tau Beta Pi.
+              Bachelor of Science degree in mechanical engineering <i> summa cum
+              laude </i> as a member of the engineering honor society Tau Beta Pi.
               Afterwards, I worked as a manufacturing engineer for three years
               for a global leader in the upstream oil field services industry,
               during which time I led lean six sigma initiatives and designed
-              mechanical fixtures in SolidWorks among other responsibilities.{" "}
+              mechanical fixtures in SolidWorks among other responsibilities.
               <br />
             </p>
             <div class="heading bottom">
@@ -425,9 +426,8 @@ function App() {
               <br />
               <div class="box">
                 <div className="mcRemovesEmailForm">
-                <h3 class="LetsConnect">Let's Connect</h3>
-                <div class="boxSocial">
-                 
+                  <h3 class="LetsConnect">Let's Connect</h3>
+                  <div class="boxSocial">
                     {/* <div class="icon">
                   <a
                     href="https://www.facebook.com/michael.cleveland.1840"
@@ -468,8 +468,7 @@ function App() {
                         <i class="fa-brands fa-hackerrank"></i>
                       </a>
                     </div>
-                  
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
